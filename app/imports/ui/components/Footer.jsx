@@ -1,21 +1,37 @@
 import React from 'react';
+import { Grid, List } from 'semantic-ui-react';
 
-/** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
-class Footer extends React.Component {
+export default class Footer extends React.Component {
   render() {
-    const divStyle = { paddingTop: '15px' };
     return (
-        <footer>
-          <div style={divStyle} className="ui center aligned container">
-            <hr />
-              Department of Information and Computer Sciences <br />
-              University of Hawaii<br />
-              Honolulu, HI 96822 <br />
-            <a href="http://ics-software-engineering.github.io/meteor-application-template-react">Template Home Page</a>
-          </div>
-        </footer>
+        <div className='footer-background'>
+          <Grid container columns={3}>
+            <Grid.Column>
+              Lunch
+              <hr/>
+              <List>
+                <List.Item>Monday – Friday: 11:00am – 2:30pm</List.Item>
+                <List.Item>Saturday – Sunday: Not open for lunch</List.Item>
+              </List>
+            </Grid.Column>
+            <Grid.Column>
+              Bar
+              <hr/>
+              <List>
+                <List.Item>Monday- Friday from 11:00am</List.Item>
+                <List.Item>Saturday- Sunday from 4:00pm</List.Item>
+              </List>
+            </Grid.Column>
+            <Grid.Column>
+              Dinner
+              <hr/>
+              <List>
+                <List.Item>Monday – Saturday: 5:30pm – 10:00pm</List.Item>
+                <List.Item>Sunday: 5:00pm – 9:00pm</List.Item>
+              </List>
+            </Grid.Column>
+          </Grid>
+        </div>
     );
   }
 }
-
-export default Footer;
